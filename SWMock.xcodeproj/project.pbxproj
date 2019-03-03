@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1515B3B4222C5F0A00E870A5 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515B3B3222C5F0A00E870A5 /* Mock.swift */; };
 		15D511D8222C5E7000514B26 /* SWMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D511CE222C5E7000514B26 /* SWMock.framework */; };
-		15D511DD222C5E7000514B26 /* SWMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D511DC222C5E7000514B26 /* SWMockTests.swift */; };
+		15D511DD222C5E7000514B26 /* SWMockExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D511DC222C5E7000514B26 /* SWMockExampleTests.swift */; };
 		15D511DF222C5E7000514B26 /* SWMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D511D1222C5E7000514B26 /* SWMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -23,11 +24,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1515B3B3222C5F0A00E870A5 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		15D511CE222C5E7000514B26 /* SWMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D511D1222C5E7000514B26 /* SWMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMock.h; sourceTree = "<group>"; };
 		15D511D2222C5E7000514B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D511D7222C5E7000514B26 /* SWMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15D511DC222C5E7000514B26 /* SWMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMockTests.swift; sourceTree = "<group>"; };
+		15D511DC222C5E7000514B26 /* SWMockExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMockExampleTests.swift; sourceTree = "<group>"; };
 		15D511DE222C5E7000514B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				15D511D1222C5E7000514B26 /* SWMock.h */,
+				1515B3B3222C5F0A00E870A5 /* Mock.swift */,
 				15D511D2222C5E7000514B26 /* Info.plist */,
 			);
 			path = SWMock;
@@ -80,7 +83,7 @@
 		15D511DB222C5E7000514B26 /* SWMockTests */ = {
 			isa = PBXGroup;
 			children = (
-				15D511DC222C5E7000514B26 /* SWMockTests.swift */,
+				15D511DC222C5E7000514B26 /* SWMockExampleTests.swift */,
 				15D511DE222C5E7000514B26 /* Info.plist */,
 			);
 			path = SWMockTests;
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					15D511CD222C5E7000514B26 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					15D511D6222C5E7000514B26 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1515B3B4222C5F0A00E870A5 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D511DD222C5E7000514B26 /* SWMockTests.swift in Sources */,
+				15D511DD222C5E7000514B26 /* SWMockExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		15D511E3222C5E7000514B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.mildware.SWMock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +373,7 @@
 		15D511E4222C5E7000514B26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +399,7 @@
 		15D511E6222C5E7000514B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PXDCUF9Q9;
 				INFOPLIST_FILE = SWMockTests/Info.plist;
@@ -409,6 +418,7 @@
 		15D511E7222C5E7000514B26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PXDCUF9Q9;
 				INFOPLIST_FILE = SWMockTests/Info.plist;
