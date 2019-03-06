@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1515B3B4222C5F0A00E870A5 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515B3B3222C5F0A00E870A5 /* Mock.swift */; };
+		156618662231234C00B9950A /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515B3B3222C5F0A00E870A5 /* Mock.swift */; };
 		15D511D8222C5E7000514B26 /* SWMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D511CE222C5E7000514B26 /* SWMock.framework */; };
 		15D511DD222C5E7000514B26 /* SWMockExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D511DC222C5E7000514B26 /* SWMockExampleTests.swift */; };
 		15D511DF222C5E7000514B26 /* SWMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D511D1222C5E7000514B26 /* SWMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3D5B0A4F28335F9CD1C4CF /* Pods_SWMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0775747AB20F2F3234400 /* Pods_SWMock.framework */; };
+		4B3A4E49845330D68EF0FD3E /* Pods_SWMockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2495586C62B3642CEA54 /* Pods_SWMockTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,12 @@
 		15D511D7222C5E7000514B26 /* SWMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D511DC222C5E7000514B26 /* SWMockExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMockExampleTests.swift; sourceTree = "<group>"; };
 		15D511DE222C5E7000514B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7927B475ECC7C635C67A633F /* Pods-SWMock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWMock.release.xcconfig"; path = "Target Support Files/Pods-SWMock/Pods-SWMock.release.xcconfig"; sourceTree = "<group>"; };
+		B1D0775747AB20F2F3234400 /* Pods_SWMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C443D29020434D837E181796 /* Pods-SWMockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWMockTests.release.xcconfig"; path = "Target Support Files/Pods-SWMockTests/Pods-SWMockTests.release.xcconfig"; sourceTree = "<group>"; };
+		E44E2495586C62B3642CEA54 /* Pods_SWMockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWMockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27B0848A448F89F9D56C082 /* Pods-SWMockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWMockTests.debug.xcconfig"; path = "Target Support Files/Pods-SWMockTests/Pods-SWMockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC1B03B9AEFD92468D342F7F /* Pods-SWMock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWMock.debug.xcconfig"; path = "Target Support Files/Pods-SWMock/Pods-SWMock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3D5B0A4F28335F9CD1C4CF /* Pods_SWMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,18 +55,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D511D8222C5E7000514B26 /* SWMock.framework in Frameworks */,
+				4B3A4E49845330D68EF0FD3E /* Pods_SWMockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022DDE8F80B39F0C27E23C47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1B03B9AEFD92468D342F7F /* Pods-SWMock.debug.xcconfig */,
+				7927B475ECC7C635C67A633F /* Pods-SWMock.release.xcconfig */,
+				F27B0848A448F89F9D56C082 /* Pods-SWMockTests.debug.xcconfig */,
+				C443D29020434D837E181796 /* Pods-SWMockTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		09518638FDFF936A59C9C917 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1D0775747AB20F2F3234400 /* Pods_SWMock.framework */,
+				E44E2495586C62B3642CEA54 /* Pods_SWMockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15D511C4222C5E7000514B26 = {
 			isa = PBXGroup;
 			children = (
 				15D511D0222C5E7000514B26 /* SWMock */,
 				15D511DB222C5E7000514B26 /* SWMockTests */,
 				15D511CF222C5E7000514B26 /* Products */,
+				022DDE8F80B39F0C27E23C47 /* Pods */,
+				09518638FDFF936A59C9C917 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D511E2222C5E7000514B26 /* Build configuration list for PBXNativeTarget "SWMock" */;
 			buildPhases = (
+				0404BA0076C3928DCCD3784C /* [CP] Check Pods Manifest.lock */,
 				15D511C9222C5E7000514B26 /* Headers */,
 				15D511CA222C5E7000514B26 /* Sources */,
 				15D511CB222C5E7000514B26 /* Frameworks */,
@@ -125,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D511E5222C5E7000514B26 /* Build configuration list for PBXNativeTarget "SWMockTests" */;
 			buildPhases = (
+				9E2B6FD13B84D035374D77C7 /* [CP] Check Pods Manifest.lock */,
 				15D511D3222C5E7000514B26 /* Sources */,
 				15D511D4222C5E7000514B26 /* Frameworks */,
 				15D511D5222C5E7000514B26 /* Resources */,
+				AAE534363163D9BFA116C575 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,12 +228,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0404BA0076C3928DCCD3784C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWMock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E2B6FD13B84D035374D77C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWMockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE534363163D9BFA116C575 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWMockTests/Pods-SWMockTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWMockTests/Pods-SWMockTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15D511CA222C5E7000514B26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1515B3B4222C5F0A00E870A5 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D511DD222C5E7000514B26 /* SWMockExampleTests.swift in Sources */,
+				156618662231234C00B9950A /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +449,7 @@
 		};
 		15D511E3222C5E7000514B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1B03B9AEFD92468D342F7F /* Pods-SWMock.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -365,13 +470,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		15D511E4222C5E7000514B26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7927B475ECC7C635C67A633F /* Pods-SWMock.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -391,15 +497,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.mildware.SWMock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		15D511E6222C5E7000514B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27B0848A448F89F9D56C082 /* Pods-SWMockTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PXDCUF9Q9;
 				INFOPLIST_FILE = SWMockTests/Info.plist;
@@ -417,8 +523,8 @@
 		};
 		15D511E7222C5E7000514B26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C443D29020434D837E181796 /* Pods-SWMockTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PXDCUF9Q9;
 				INFOPLIST_FILE = SWMockTests/Info.plist;

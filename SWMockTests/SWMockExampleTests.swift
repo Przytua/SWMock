@@ -7,7 +7,24 @@
 //
 
 import XCTest
+import Nimble
 @testable import SWMock
+
+//func beCalled(times count: Int? = nil) -> Predicate<[FunctionCallRecord]> {
+//    return Predicate.simple("be called") { actualExpression in
+//        guard let actualValue = try actualExpression.evaluate() else {
+//            return PredicateStatus(bool: false)
+//        }
+//        if let count = count {
+//            return PredicateStatus(bool: actualValue.count == count)
+//        }
+//        return PredicateStatus(bool: !actualValue.isEmpty)
+//    }
+//}
+//
+//func verify(_ records: [FunctionCallRecord], times count: Int? = nil) {
+//    expect(records).to(beCalled(times: count))
+//}
 
 protocol ExampleProtocol {
     var exampleProperty: Int { get }
@@ -66,8 +83,8 @@ class ExampleProtocolUser {
         protocolImplementation.exampleFunctionWithoutArguments()
         protocolImplementation.exampleFunctionWithoutArguments()
 
-        protocolImplementation.exampleFunction(with: "example argument")
-        protocolImplementation.exampleFunction(with: "another argument")
+//        protocolImplementation.exampleFunction(with: "example argument")
+//        protocolImplementation.exampleFunction(with: "another argument")
 
         functionReturnValue = protocolImplementation.exampleFunctionWithReturnValue()
     }
@@ -102,18 +119,27 @@ class SWMockExampleTests: XCTestCase {
 
         XCTAssert(exampleMock.exampleFunctionWithoutArgumentsCalled)
         XCTAssert(exampleMock.called(function: "exampleFunctionWithoutArguments", times: 2))
-
         XCTAssert(exampleMock.exampleFunctionCalled)
+        XCTAssert(exampleMock.called(function: "exampleFunction"))
         XCTAssert(exampleMock.called(function: "exampleFunction", times: 2))
         XCTAssert(exampleMock.called(function: "exampleFunction", with: ["example argument"]))
         XCTAssert(exampleMock.called(function: "exampleFunction", with: ["example argument"], times: 1))
         XCTAssert(exampleMock.called(function: "exampleFunction", with: ["another argument"]))
         XCTAssert(exampleMock.called(function: "exampleFunction", with: ["another argument"], times: 1))
-
         XCTAssert(exampleMock.exampleFunctionWithReturnValueCalled)
         XCTAssert(protocolUser.functionReturnValue == 1.2345)
 
-        XCTAssert(exampleMock.calls.count == 5)
+        XCTAssert(verify(exampleMock).exampleFunctionWithoutArguments())
+        XCTAssert(verify(exampleMock).exampleFunction())
+        XCTAssert(verify(exampleMock).exampleFunction(with: "example argument"))
+        XCTAssert(verify(exampleMock).exampleFunction(with: "another argument"))
+        XCTAssert(verify(exampleMock).exampleFunctionWithReturnValue())
+
+        expectMock(exampleMock).exampleFunctionWithoutArguments().to(beCalled())
+        expectMock(exampleMock).exampleFunction().to(beCalled())
+        expectMock(exampleMock).exampleFunction(with: "example argument").to(beCalled())
+        expectMock(exampleMock).exampleFunction(with: "another argument").to(beCalled())
+        expectMock(exampleMock).exampleFunctionWithReturnValue().to(beCalled())
     }
 
 }
